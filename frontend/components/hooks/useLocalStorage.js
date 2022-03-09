@@ -6,6 +6,8 @@ import { useState } from 'react';
 const useLocalStorage = (key, initialValue) => {
 
 const [state, setState] = useState(() => {
+
+    //reading the local storage 
     if(localStorage.getItem(key)){
         return JSON.parse(localStorage.getItem(key));
     }
@@ -13,6 +15,8 @@ const [state, setState] = useState(() => {
     localStorage.setItem(key, JSON.stringify(initialValue)); 
     return initialValue; 
 });
+
+//write the local storage 
 
 const setStoredState = value => {
     localStorage.setItem(key, JSON.stringify(value)); 
