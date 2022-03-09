@@ -5,7 +5,7 @@ import useDarkMode from "./components/hooks/useDarkMode";
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
-import "./style.css";
+
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
